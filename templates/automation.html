@@ -1,0 +1,20 @@
+    {% extends 'layout.html' %}
+
+    {% block conteudo %}
+    <main>
+        <section class="jumbotron">
+            <div class="container">
+                <h1 class="display-4"> Projetos de automação </h1>
+                <p class="lead">Descrição de projetos</p>
+            </div>
+        </section>
+        <section class="my-4">
+            <div class="container">
+                <h2> Apresentação de projetos</h2>
+                <ul class="list-group">
+                    {% for project in projects %}
+                        <li class="list-group-item">
+                            <a href="#">
+                                <img class="mr-3" src="{{ project.image }}" alt="{{ project.title }}"> {% endfor %}
+
+    {% endblock %}
